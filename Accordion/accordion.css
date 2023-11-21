@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+
+}
+ul{
+    position: relative;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    padding: 40px;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #1d1d1d87, rgb(46, 43, 43));
+    /* background-image: url(https://c4.wallpaperflare.com/wallpaper/114/760/992/abstract-hexagon-digital-art-pattern-wallpaper-preview.jpg); */
+    background-size:cover;
+
+
+}
+
+.accordions{
+    padding: 50px;
+    color: white;
+    width: 70%;
+    box-shadow: 0 0 40px 25px #111;
+    border-radius: 10px;
+    transition: box-shadow 0.5s ease-in-out;
+
+
+}
+
+.accordions:hover{
+    /* box-shadow: 0 4px 6px rgba(255, 255, 0, 0.3), 0 6px 15px rgba(255, 255, 0, 0.3); */
+    box-shadow: 0 0 30px 10px #e86d15;
+
+    transition: 0.4s;
+}
+.accordions-heading{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.accordion-title{
+    border: 1px solid rgb(116, 116, 116);
+    padding:20px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color:#555555cc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.accordion-title:hover{
+   background-color: #e86d15;
+   transition: 0.4s ease-in-out;
+}
+
+
+.accordion-description{
+    background-color: white;
+    border: 1px solid black;
+    padding:15px 10px;
+    border-radius: 10px;
+    color: black;
+    margin-top: 5px;
+    display: none;
+
+}
+
+
+.accordion-description.active{
+    display: block;
+}
+
+.accordion-items{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+@media (max-width: 768px){
+    .accordions{
+        padding: 30px;
+        width:90%;
+        font-size: 14px;
+    }
+    body{
+        padding: 15px;
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1439px){
+    .accordions{
+        width: 90%;
+    }
+  
+}
+
+
+
